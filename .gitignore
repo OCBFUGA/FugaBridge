@@ -1,0 +1,9 @@
+node_modules
+.env
+api/evaluations.json
+api/current_quest.json
+/tmp/
+*.log
+.DS_Store
+artifacts/
+brain/

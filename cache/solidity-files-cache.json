@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\janio\\.gemini\\antigravity\\scratch\\arbitrum-bridge\\contracts\\ArbitrumBridgeHandler.sol": {
+      "lastModificationDate": 1773012059325,
+      "contentHash": "15d4628667a8ee35c654d81142195124",
+      "sourceName": "contracts/ArbitrumBridgeHandler.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "ArbitrumBridgeHandler"
+      ]
+    }
+  }
+}
