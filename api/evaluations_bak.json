@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2026-03-09T05:47:32.901Z",
+    "userId": "user_id_123",
+    "prompt": "Quais as melhores estratégias para L2s em 2026?",
+    "choice": "miner_a",
+    "minerA": "Resposta do Minerador A para: 'Quais as melhores estratégias para L2s em 2026?' - Baseada em dados estocásticos de 2026.",
+    "minerB": "Resposta do Minerador B para: 'Quais as melhores estratégias para L2s em 2026?' - Focada em precisão técnica e brevidade.",
+    "rewardWei": "1000000000000000",
+    "txHash": "0x144b4ea1dc21b9bf9d18fbb3bd8cb50cf3f8fab4ac9de8aa2a20310e81904c36"
+  },
+  {
+    "timestamp": "2026-03-09T06:16:17.982Z",
+    "userId": "user_id_123",
+    "prompt": "Explique como o Bittensor escala a inteligência descentralizada.",
+    "choice": "miner_a",
+    "minerA": "Resposta do Minerador A para: 'Explique como o Bittensor escala a inteligência descentralizada.' - Baseada em dados estocásticos de 2026.",
+    "minerB": "Resposta do Minerador B para: 'Explique como o Bittensor escala a inteligência descentralizada.' - Focada em precisão técnica e brevidade.",
+    "rewardWei": "1000000000000000",
+    "txHash": "0x7c04d6870aeaf0c960e3a931fbf3f20a71a2ad4d39bd66f3a97d846705ea4fe6"
+  }
+]

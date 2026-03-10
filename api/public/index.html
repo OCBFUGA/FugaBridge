@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FugaBridge | Validator Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -17,7 +20,12 @@
             <div class="status-badge" id="bridge-balance">Bridge Balance: Loading...</div>
         </header>
 
-        <main>
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="live">Live Dashboard</button>
+            <button class="tab-btn" data-tab="vision">Research & Vision</button>
+        </nav>
+
+        <main id="live-tab" class="tab-content active">
             <section class="overview">
                 <div class="card">
                     <h3>Total Evaluations</h3>
@@ -47,6 +55,7 @@
                                 <th>Timestamp</th>
                                 <th>Prompt</th>
                                 <th>Choice</th>
+                                <th>Cognição (PoHC)</th>
                                 <th>TX Hash</th>
                                 <th>Reward</th>
                             </tr>
@@ -59,10 +68,53 @@
             </section>
         </main>
 
+        <main id="vision-tab" class="tab-content">
+            <section class="vision-hero">
+                <h2>FugaBridge Future Protocol: Verifiable Human Intelligence</h2>
+                <p class="subtitle">Elevating Bittensor RLHF with Cutting-Edge Cryptographic Proofs</p>
+            </section>
+
+            <section class="vision-grid">
+                <div class="card vision-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Proof of Human Cognition (PoHC)</h3>
+                    <p>Moving beyond simple votes to verifiable cognitive effort. Every RLHF quest generates a shard of
+                        'Mental Proof' used to score miner accuracy with human-level nuance.</p>
+                </div>
+                <div class="card vision-card">
+                    <div class="card-icon">🔐</div>
+                    <h3>ZK-Privacy RLHF</h3>
+                    <p>Zero-Knowledge Proofs ensure that validator prompts and human feedback remain private while
+                        proving the validity of the reward payout on-chain.</p>
+                </div>
+                <div class="card vision-card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Dynamic Reward Scaling</h3>
+                    <p>Autonomous incentives that scale based on task complexity and consensus difficulty, ensuring a
+                        fair market for high-quality human attention.</p>
+                </div>
+                <div class="card vision-card">
+                    <div class="card-icon">🦞</div>
+                    <h3>FugaClaw Hybrid Consensus</h3>
+                    <p>The FugaClaw agent acts as a pre-validator, challenging evaluators to provide justificative
+                        nuance before triggering the L2 reward bridge.</p>
+                </div>
+            </section>
+
+            <section class="vision-architecture">
+                <div class="card architecture-card">
+                    <h2>Technical Architecture Roadmap</h2>
+                    <img id="architecture-diagram" src="arch.png" alt="FugaBridge Technical Architecture"
+                        class="arch-img">
+                </div>
+            </section>
+        </main>
+
         <footer>
             <p>&copy; 2026 FugaBridge | Bittensor Subnet Ideathon Round 2</p>
         </footer>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

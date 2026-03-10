@@ -41,6 +41,7 @@ async function fetchDashboardData() {
                 <td>${date}</td>
                 <td title="${evaluation.prompt}">${evaluation.prompt.substring(0, 30)}...</td>
                 <td class="${evaluation.choice === 'miner_a' ? 'choice-a' : 'choice-b'}">${evaluation.choice === 'miner_a' ? 'Miner A' : 'Miner B'}</td>
+                <td><span class="pohc-badge">${evaluation.pohcScore || '---'}</span></td>
                 <td><a href="https://sepolia.arbiscan.io/tx/${evaluation.txHash}" target="_blank" class="tx-link">${txShort}</a></td>
                 <td class="reward-badge">${(evaluation.rewardWei / 1e18).toFixed(4)} ETH</td>
             `;
@@ -51,6 +52,28 @@ async function fetchDashboardData() {
         console.error('Error fetching dashboard data:', error);
     }
 }
+
+// Tab Switching Logic
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+
+        // Update Buttons
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update Content
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === `${tabId}-tab`) {
+                content.classList.add('active');
+            }
+        });
+    });
+});
 
 // Auto-refresh every 10 seconds
 setInterval(fetchDashboardData, 10000);

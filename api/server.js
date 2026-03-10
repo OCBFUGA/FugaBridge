@@ -4,6 +4,7 @@ const express = require("express");
 const { ethers } = require("ethers");
 require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 const mappings = require("./mappings.json");
+const pohc = require("./pohc-logic");
 
 const EVAL_PATH = path.join(__dirname, "evaluations.json");
 if (!fs.existsSync(EVAL_PATH)) {
@@ -39,6 +40,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.post("/submit-evaluation", async (req, res) => {
     const { userId, prompt, choice, minerA, minerB, rewardWei, txHash } = req.body;
 
+    // Calcula o Score PoHC baseado na nuance da resposta (minerA ou minerB dependendo da escolha)
+    const feedbackText = choice === 'miner_a' ? minerA : minerB;
+    const score = pohc.computeScore(feedbackText, { minerA_score: 0.8, minerB_score: 0.8 });
+
     const evaluation = {
         timestamp: new Date().toISOString(),
         userId,
@@ -47,7 +52,8 @@ app.post("/submit-evaluation", async (req, res) => {
         minerA,
         minerB,
         rewardWei,
-        txHash
+        txHash,
+        pohcScore: score.toFixed(4)
     };
 
     try {

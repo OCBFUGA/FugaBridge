@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FugaBridge | Interactive Technical Pitch</title>
+    <link rel="stylesheet" href="pitch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div id="presentation-container">
+            <!-- Slide 1: Hero -->
+            <div class="slide active" id="slide-1" data-duration="5000">
+                <img src="slide1.png" alt="Hero Slide">
+            </div>
+
+            <!-- Slide 2: Problem -->
+            <div class="slide" id="slide-2" data-duration="7000">
+                <img src="slide2.png" alt="The Problem">
+            </div>
+
+            <!-- Slide 3: Solution -->
+            <div class="slide" id="slide-3" data-duration="8000">
+                <img src="slide3.png" alt="The Solution">
+            </div>
+
+            <!-- Slide 4: Real-Time Demo -->
+            <div class="slide" id="slide-4" data-duration="15000">
+                <div class="demo-wrapper">
+                    <header class="demo-header">
+                        <h2>Real-Time Technical Demo</h2>
+                        <p>Live RLHF Automation & L2 Bridge Rewards</p>
+                    </header>
+                    <iframe src="index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Slide 5: Future Vision -->
+            <div class="slide" id="slide-5" data-duration="10000">
+                <div class="vision-wrapper">
+                    <h2>Future Protocol: Decentralized Human Oracle</h2>
+                    <img src="arch.png" alt="Architecture">
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls & Narration Script Overlay -->
+        <div class="overlay-container">
+            <div class="controls">
+                <button id="prev-btn">← Prev</button>
+                <button id="play-pause-btn">Play Pitch</button>
+                <button id="next-btn">Next →</button>
+            </div>
+            <div class="script-box">
+                <div id="narration-text">Clique em 'Play Pitch' para iniciar a apresentação técnica.</div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+    <script src="pitch.js"></script>
+</body>
+
+</html>
